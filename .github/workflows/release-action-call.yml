@@ -14,9 +14,9 @@ jobs:
       #You can specify the solution name here
       solution_name: Playground
       #Update your values here
-      BUILD_ENVIRONMENT_URL: <https://harisdev.crm.dynamics.com/>
-      PRODUCTION_ENVIRONMENT_URL: <https://harisdev.crm.dynamics.com/>
-      CLIENT_ID: <a55651f9-bab6-480d-bd4a-7f0f43aafce3>
-      TENANT_ID: <d2a857ff-6cf1-4889-978d-db5ef44bf6fb>      
+      BUILD_ENVIRONMENT_URL: https://harisdev.crm.dynamics.com
+      PRODUCTION_ENVIRONMENT_URL: https://harisdev.crm.dynamics.com
+      CLIENT_ID: a55651f9-bab6-480d-bd4a-7f0f43aafce3
+      TENANT_ID: d2a857ff-6cf1-4889-978d-db5ef44bf6fb
     secrets:
       envSecret: ${{ secrets.HARIS_DATAVERSE }}
