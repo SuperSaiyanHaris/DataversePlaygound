@@ -16,7 +16,7 @@
                     <row>
                       <cell id="{b0e82a7e-5683-d90c-308a-0d779377ea8a}" showlabel="true" ordinalvalue="10000">
                         <labels>
-                          <label description="Account Name" languagecode="1033" solutionaction="Modified" />
+                          <label description="Account Name" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -26,28 +26,28 @@
                     <row>
                       <cell id="{8b98a55e-a345-b20e-d46e-801e79d5c1c1}" showlabel="true" ordinalvalue="10008" solutionaction="Modified">
                         <labels>
-                          <label description="Fax" languagecode="1033" solutionaction="Modified" />
+                          <label description="Fax" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{e6441984-4343-813a-aa7e-e2747ad35390}" showlabel="true" ordinalvalue="10009" solutionaction="Modified">
                         <labels>
-                          <label description="Website" languagecode="1033" solutionaction="Modified" />
+                          <label description="Website" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{87DE203E-B03C-44CC-8B06-438202B82553}" ordinalvalue="10010" solutionaction="Modified">
                         <labels>
-                          <label description="Parent Account" languagecode="1033" solutionaction="Modified" />
+                          <label description="Parent Account" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{5f38af3a-3307-47dc-b36d-d9a5de525e6e}" showlabel="true" ordinalvalue="10011" solutionaction="Modified">
                         <labels>
-                          <label description="Ticker Symbol" languagecode="1033" solutionaction="Modified" />
+                          <label description="Ticker Symbol" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -106,7 +106,7 @@
                     <row>
                       <cell id="{4913500e-605a-809b-e99e-69e2710d09bd}" showlabel="true" locklevel="0" ordinalvalue="10000">
                         <labels>
-                          <label description="Address 1" languagecode="1033" solutionaction="Modified" />
+                          <label description="Address 1" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -121,14 +121,14 @@
                     <row>
                       <cell id="{b187688c-8410-5990-16ec-e153968ab583}" showlabel="true" locklevel="0" ordinalvalue="10000">
                         <labels>
-                          <label description="Primary Contact" languagecode="1033" solutionaction="Modified" />
+                          <label description="Primary Contact" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{0F664FFF-E39E-4676-9191-CBA16972B21D}" colspan="1" showlabel="false" ordinalvalue="10001">
                         <labels>
-                          <label description="Primary Contact" languagecode="1033" solutionaction="Modified" />
+                          <label description="Primary Contact" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -156,21 +156,21 @@
                     <row>
                       <cell id="{59782911-4d1a-38dc-ce49-7dae620dbc51}" showlabel="true" ordinalvalue="10000">
                         <labels>
-                          <label description="Industry" languagecode="1033" solutionaction="Modified" />
+                          <label description="Industry" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{930beba3-d531-0808-c403-de95e2ac3e62}" showlabel="true" ordinalvalue="10001">
                         <labels>
-                          <label description="SIC Code" languagecode="1033" solutionaction="Modified" />
+                          <label description="SIC Code" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{1c33ad89-92a1-8433-2378-306259eb57c0}" showlabel="true" ordinalvalue="10002">
                         <labels>
-                          <label description="Ownership" languagecode="1033" solutionaction="Modified" />
+                          <label description="Ownership" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -186,28 +186,28 @@
                     <row>
                       <cell id="{7cd2b88c-b25c-4729-9c27-f59ebb5a1538}" ordinalvalue="10000">
                         <labels>
-                          <label description="Currency" languagecode="1033" solutionaction="Modified" />
+                          <label description="Currency" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{0125719c-a5b0-4230-9817-3fba5d6ebfaf}" ordinalvalue="10001">
                         <labels>
-                          <label description="Credit Limit" languagecode="1033" solutionaction="Modified" />
+                          <label description="Credit Limit" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{abc2c862-bcd4-4a4b-ac51-c311d4e66d5b}" ordinalvalue="10002">
                         <labels>
-                          <label description="Credit Hold" languagecode="1033" solutionaction="Modified" />
+                          <label description="Credit Hold" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
                     <row>
                       <cell id="{0bab9157-d14e-441f-969d-80460634c15e}" ordinalvalue="10003">
                         <labels>
-                          <label description="Payment Terms" languagecode="1033" solutionaction="Modified" />
+                          <label description="Payment Terms" languagecode="1033" solutionaction="Added" />
                         </labels>
                       </cell>
                     </row>
@@ -229,13 +229,12 @@
                     <label description="New Section" languagecode="1033" />
                   </labels>
                   <rows>
-                    <row />
                     <row>
                       <cell id="{8e2f2195-0322-4765-ba39-9434856c35a3}" locklevel="0" colspan="1" rowspan="1" showlabel="false" ordinalvalue="10000">
                         <labels>
                           <label description="Account Number" languagecode="1033" />
                         </labels>
-                        <control id="accountnumber" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="accountnumber" disabled="false" uniqueid="{6d0dfb2e-112f-4b87-973a-2a3e14d374e1}" />
+                        <control id="accountnumber" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="accountnumber" disabled="false" uniqueid="{6D0DFB2E-112F-4B87-973A-2A3E14D374E1}" />
                       </cell>
                     </row>
                   </rows>
@@ -250,24 +249,24 @@
           <row>
             <cell id="{d3e19d4e-b2ae-409f-9b4e-5976527c6c83}" ordinalvalue="10000">
               <labels>
-                <label description="Annual Revenue" languagecode="1033" solutionaction="Modified" />
+                <label description="Annual Revenue" languagecode="1033" solutionaction="Added" />
               </labels>
             </cell>
             <cell id="{2adb5a52-604d-5aad-ba6a-2bbab6c33594}" showlabel="true" ordinalvalue="20001">
               <labels>
-                <label description="Number of Employees" languagecode="1033" solutionaction="Modified" />
+                <label description="Number of Employees" languagecode="1033" solutionaction="Added" />
               </labels>
             </cell>
             <cell id="{54b2d0a2-eb77-b3cd-b60a-03ea6944e98e}" showlabel="true" locklevel="1" ordinalvalue="30002">
               <labels>
-                <label description="Owner" languagecode="1033" solutionaction="Modified" />
+                <label description="Owner" languagecode="1033" solutionaction="Added" />
               </labels>
             </cell>
           </row>
         </rows>
       </header>
       <controlDescriptions>
-        <controlDescription forControl="{6d0dfb2e-112f-4b87-973a-2a3e14d374e1}" solutionaction="Added">
+        <controlDescription forControl="{6D0DFB2E-112F-4B87-973A-2A3E14D374E1}" solutionaction="Added">
           <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
             <parameters>
               <datafieldname>accountnumber</datafieldname>
@@ -294,25 +293,7 @@
         </controlDescription>
       </controlDescriptions>
       <footer id="{455f896c-8f7a-402b-bbb3-8582d08ddf8d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
-        <rows>
-          <row>
-            <cell id="{a58655f5-3257-4357-8ad2-18d72436c9d3}" showlabel="false" ordinalvalue="10000">
-              <labels>
-                <label description="" languagecode="1033" />
-              </labels>
-            </cell>
-            <cell id="{3b3bc7ab-8b58-4884-ad3f-c0f382bc890c}" showlabel="false" ordinalvalue="20001">
-              <labels>
-                <label description="" languagecode="1033" />
-              </labels>
-            </cell>
-            <cell id="{74e8fa96-5b57-4222-857f-94efd5143a54}" showlabel="false" ordinalvalue="30002">
-              <labels>
-                <label description="" languagecode="1033" />
-              </labels>
-            </cell>
-          </row>
-        </rows>
+        <rows></rows>
       </footer>
     </form>
     <LocalizedNames>
