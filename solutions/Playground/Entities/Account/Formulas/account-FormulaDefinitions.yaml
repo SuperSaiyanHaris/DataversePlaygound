@@ -1,0 +1,6 @@
+pg_agencycodeaddress: |-
+    =Concatenate("Agency Code: ",pg_agencycode, " - ", "Address: ", address1_line1)
+pg_currentpremiumpremiumrollup: |-
+    =Concatenate("Current Premium: $", Text(pg_currentpremium, "#"), " - Rollup Premium: $", Text(pg_premiumrollup, "#"))
+pg_primarycontactfx: |-
+    =Concatenate("Primary Contact: ", primarycontactid.fullname)
