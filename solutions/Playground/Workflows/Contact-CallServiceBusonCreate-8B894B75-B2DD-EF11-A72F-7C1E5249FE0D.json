@@ -1,0 +1,83 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "cr047_sharedcommondataserviceforapps_bb0d8"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_servicebus": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "pg_sharedservicebus_a0ceb"
+        },
+        "api": {
+          "name": "shared_servicebus"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_Contact_is_Created": {
+          "metadata": {
+            "operationMetadataId": "1c4cf2e1-46cd-4ea7-b4a2-81e6c1bd06ad"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "contact",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Send_message_to_dataverse-events_queue": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "67afef04-e1ff-4ac9-83d2-769edbe81868"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_servicebus",
+              "operationId": "SendMessage",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_servicebus"
+            },
+            "parameters": {
+              "entityName": "dataverse-events",
+              "message/ContentData": "@triggerOutputs()?['body']",
+              "systemProperties": "None"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

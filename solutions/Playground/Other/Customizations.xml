@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25023.160" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25024.00162">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <AppModuleSiteMaps />
+  <AppModules />
+  <EntityDataProviders />
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="pg_sharedservicebus_a0ceb">
+      <connectionreferencedisplayname>Service Bus Playground-a0ceb</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_servicebus</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontents_262f4">
+      <connectionreferencedisplayname>HTTP with Microsoft Entra ID (preauthorized) Playground-262f4</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontents</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontents_5165e">
+      <connectionreferencedisplayname>HTTP with Microsoft Entra ID (preauthorized) Playground-5165e</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontents</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontents_87634">
+      <connectionreferencedisplayname>HTTP with Microsoft Entra ID (preauthorized) Playground-87634</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontents</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_3a88c">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-3a88c</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_52956">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-52956</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_75c74">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-75c74</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_b6193">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-b6193</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_da339">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-da339</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="pg_sharedwebcontentsv2_e2369">
+      <connectionreferencedisplayname>HTTP With Microsoft Entra ID Playground-e2369</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_webcontentsv2</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

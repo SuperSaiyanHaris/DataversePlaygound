@@ -1,0 +1,221 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "cr047_sharedcommondataserviceforapps_bb0d8"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_webcontents": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "pg_sharedwebcontents_87634"
+        },
+        "api": {
+          "name": "shared_webcontents"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "e4f5eeaf-f949-4e98-aabf-b2cdf481896a"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_a_row_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "c2f707fb-5b8f-4c4b-872f-b215651a3062"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "pg_changetrackings",
+              "recordId": "a01cfa3c-63ed-ef11-be20-7c1e5218c3d9"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Invoke_an_HTTP_request": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c20860dc-0a15-44b3-9568-b08425de92f2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_webcontents",
+              "operationId": "InvokeHttp",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_webcontents"
+            },
+            "parameters": {
+              "request/method": "GET",
+              "request/url": "https://harisdev.crm.dynamics.com/api/data/v9.0/contacts?$select=firstname, lastname,jobtitle,emailaddress1&$deltatoken=@{outputs('Get_a_row_by_ID')?['body/pg_token']}",
+              "request/headers": {
+                "OData-Version": "4.0",
+                "Prefer": "odata.track-changes",
+                "Content-Type": "applicaiton/json"
+              }
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Parse_JSON": {
+          "runAfter": {
+            "Invoke_an_HTTP_request": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7a4d6852-2e5d-49f0-9f62-ec85dddfd913"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@body('Invoke_an_HTTP_request')",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@@odata.context": {
+                  "type": "string"
+                },
+                "@@odata.deltaLink": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@@odata.etag": {
+                        "type": "string"
+                      },
+                      "firstname": {
+                        "type": "string"
+                      },
+                      "emailaddress1": {
+                        "type": "string"
+                      },
+                      "lastname": {
+                        "type": "string"
+                      },
+                      "contactid": {
+                        "type": "string"
+                      },
+                      "@@odata.context": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "reason": {
+                        "type": "string"
+                      }
+                    },
+                    "required": []
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Compose": {
+          "runAfter": {
+            "Parse_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "60e1ef7c-a487-466e-8c49-99d6fb2f34e7"
+          },
+          "type": "Compose",
+          "inputs": "@body('Parse_JSON')?['@odata.deltaLink']"
+        },
+        "Compose_2": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "03b2d3fe-f855-4e12-9523-74040acc62ad"
+          },
+          "type": "Compose",
+          "inputs": "@split(split(outputs('Compose'), '$deltatoken=')[1], '\"')[0]\r\n"
+        },
+        "Update_a_row": {
+          "runAfter": {
+            "Compose_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0389fdff-bc30-4a0a-8b1a-e3a3a0fc53ee"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "pg_changetrackings",
+              "recordId": "@outputs('Get_a_row_by_ID')?['body/pg_changetrackingid']",
+              "item/pg_token": "@outputs('Compose_2')",
+              "item/pg_tokendate": "@utcNow()"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

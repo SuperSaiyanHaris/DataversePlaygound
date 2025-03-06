@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{aecba82b-94b2-47ff-84b2-9125819d886e}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{df5e171e-bc73-4b0d-ba12-c508e4178205}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{d7e2c070-cae4-4816-b477-601f94489319}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ba2a0655-78b9-413b-a713-ff45ff82e74e}">
+                        <labels>
+                          <label description="Table Name" languagecode="1033" />
+                        </labels>
+                        <control id="pg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pg_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9b43902a-902a-4e11-852c-899d4d9ae11b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Token" languagecode="1033" />
+                        </labels>
+                        <control id="pg_token" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_token" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{541b962c-e660-4c6d-beb2-d0d956450d70}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Token Date" languagecode="1033" />
+                        </labels>
+                        <control id="pg_tokendate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="pg_tokendate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b8815295-dc97-45fe-8287-98cbeffedecc}" showlabel="true" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{4466b12e-373d-4790-8986-33d5bb299486}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{68df6c4d-ee2b-489d-93aa-aab1cefcb5f0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e1ee20cc-ac8c-4477-bc3c-0b4a74858b3b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0a2ec6d5-aa66-4369-bc3b-e9f55e90b3bd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{624d0eb5-5268-4add-ac47-620a937f426f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5bbe40cd-f185-486a-8049-13cb5c473016}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1864d827-eb32-4e1a-a9e9-8b95287f922e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{40658d91-a63a-4cc8-8d97-e0d9cb23dada}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Change Tracking" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
